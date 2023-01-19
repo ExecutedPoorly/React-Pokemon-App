@@ -4,6 +4,9 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
 import { KeyObject } from "crypto";
+
+
+
 export function Paragraph(props: any) {
   return (
     <>
@@ -24,7 +27,7 @@ export function Cards(props: any) {
   // when show is changed, makes you hit show for each card
   if (show == 0) {
     return (
-      <div className="card col-4 d-flex justify-content-center">
+      <div className="card col-3 m-2 d-flex justify-content-center card-shadow">
         <button
           onClick={() => {
             setShow(show + 1);
@@ -37,7 +40,7 @@ export function Cards(props: any) {
     );
   } else {
     return (
-      <div className="card col-4 d-flex justify-content-center">
+      <div className="card col-3 m-2 d-flex justify-content-center card-shadow">
         <img
           src={props.src}
           className="card-img-top"
@@ -124,8 +127,8 @@ export default function App() {
             </div>
           ) : null}
 
-          <div>
-            <button
+          <div className="showmorefooter m-3 d-flex justify-content-center">
+            <button className="loadmore text-center btn btn-success"
               onClick={() => {
                 setOffset(offset + limit);
               }}
@@ -133,7 +136,7 @@ export default function App() {
               More
             </button>
 
-            <Link href="/test">TEST</Link>
+            <Link href="/test" className="testpagebutton btn btn-warning">Test page</Link>
           </div>
         </div>
       </div>

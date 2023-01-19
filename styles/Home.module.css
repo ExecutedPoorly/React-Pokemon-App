@@ -127,3 +127,20 @@
     filter: invert(1);
   }
 }
+.row{
+  justify-content: center; /* centers card columns */
+}
+
+.card-shadow{/* card selector */
+  background-color: rgba(222, 223, 217, 0.26) !important;
+  box-shadow: -5px 0px 0px 0px #28648b !important;
+}
+
+.showmorefooter > *{
+  margin:20px;
+}
+
+.card.mx-auto.etc{
+  width: clamp(200px, 50vw, 600px);
+}
+

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import styles from "../../../styles/Home.module.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
@@ -47,10 +48,10 @@ export default function Pokemon() {
       {pokemon == null ? (
         <p>Blanks</p>
       ) : (
-        <div className="card mx-auto" style={{ width: "20vw" }}>
+        <div className="card mx-auto card-shadow" >
           <img
             className="card-img-top"
-            style={{ width: "18rem" }}
+            style={{/* width: */}}
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
             alt="Card image cap"
           />
